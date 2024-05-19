@@ -1,0 +1,73 @@
+*{
+    box-sizing:border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 120px 60px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabecalho" "navegacao" "principal" "rodape";
+    
+}
+
+.cabecalho{
+    grid-area: cabecalho;
+    padding: 20px;
+    color:#eee;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: -2px 3px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.nav{
+    grid-area: navegacao;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color:#f0f0f0;
+}
+.nav > button{
+    display: flex;  
+    justify-content: flex-end; 
+    margin-right: 20px;
+}
+
+.principal{
+    grid: principal;
+    height: calc(100vh - 240px);
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+
+.conteudo{
+    background-color: #fff;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    padding: 20px;
+    box-shadow: -2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.rodape{
+    display: flex;
+    grid-area: rodape;
+    align-items: center;
+    text-align: end;
+    padding: 20px;
+    z-index: -1;
+}
+
+
+
+
